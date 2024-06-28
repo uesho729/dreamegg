@@ -22,51 +22,6 @@ body{
     width: 100px;
 }
 
-@keyframes anime {
-    0% {
-      /* アニメーション開始時のスタイル */
-      transform: translateX(0px) translateY(0px);
-    }
-  
-    /*25% {
-           アニメーション開始時のスタイル 
-          transform: translateX(-50px) translateY(50px);
-        }*/
-  
-    /* 中間のスタイル（省略可能） */
-    /* 50% {
-          アニメーションの中間点でのスタイル 
-          transform: translateX(100px) translateY(100px);
-    
-        }*/
-    /*75% {
-           アニメーションの中間点でのスタイル 
-          transform: translateX(50px) translateY(-50px);
-    
-        }*/
-    100% {
-        /* アニメーション終了時のスタイル */
-        transform: translateX(-240px) translateY(-250px);
-    }
-}
-  
-#ball {
-    width: 50px;
-    height: 50px;
-    /* 画像にアニメーションを適用。キーフレーム1を使う */
-    animation: anime 3s infinite;
-    position: fixed; /* 今の位置を基準 */
-    top: 60%; /* 上から10px */
-    left: 50%; /* 左から20px */
-}
-
-#goal{
-    width:  600px;
-    height: 300px;
-    position: fixed; /* 今の位置を基準 */
-    top: 0%; /* 上から10px */
-    left: 30%; /* 左から20px */
-}
 #denmaru{
     width: 100px;
     height: 100px;
@@ -75,38 +30,19 @@ body{
     left: 50%; /* 左から20px */
 }
 
-#center{
-    100% {
-        /* アニメーション終了時のスタイル */
-        transform: translateX(0px) translateY(-300px);
-      }
+#ball {
+    width: 50px;
+    height: 50px;
+    position: fixed; /* 今の位置を基準 */
+    top: 60%; /* 上から10px */
+    left: 50%; /* 左から20px */
+
 }
 
-#left{
-    100% {
-        /* アニメーション終了時のスタイル */
-        transform: translateX(-240px) translateY(-250px);
-    }
-    
-}
-
-#right{
-    100% {
-        /* アニメーション終了時のスタイル */
-        transform: translateX(200px) translateY(-255px);
-      }
-}
-
-#topleft{
-    100% {
-        /* アニメーション終了時のスタイル */
-        transform: translateX(-250px) translateY(-400px);
-      }
-}
-
-#topright{
-    100% {
-        /* アニメーション終了時のスタイル */
-        transform: translateX(200px) translateY(-400px);
-      }
+#goal{
+    width:  600px;
+    height: 300px;
+    position: fixed; /* 今の位置を基準 */
+    top: 0%; /* 上から10px */
+    left: 30%; /* 左から20px */
 }

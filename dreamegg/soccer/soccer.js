@@ -1,13 +1,17 @@
+var choice = 2;
+
 //ゲームスタート
 function start(){
-    keeper();
+    direction = moveKeeper();
+    moveBall();
+    if(choice == direction){
+        alert("残念...");
+    }
 }
 
 
 //プレイヤーの動き
-function player(aim){
-    var choice=0;
-    
+function aimBall(aim){
     if(aim == "center"){
         choice = 1;
     }
@@ -23,8 +27,6 @@ function player(aim){
     else if(aim == "arrowtopright"){
         choice = 5;
     }
-    
-    alert(choice);
 }
 
 
@@ -35,9 +37,9 @@ function random(){
 }
 
 //キーパーの動き
-function keeper(){
+function moveKeeper(){
     var keeperclass = document.getElementById("keeper");
-    var keeper = random();
+    var keeper = 2;
     switch (keeper) { 
         case 1:
             keeperclass.className = "center";
@@ -60,5 +62,35 @@ function keeper(){
             break;
     }
 
-    alert(keeper);
+    return keeper;
+}
+
+function moveBall(){
+    if(choice == 1){
+        document.querySelector(`#ball`).animate(
+            [
+              { top: '460px', left: '730px' },
+              { top: '100px', left: '730px' }
+            ],
+            {
+              duration: 1000,
+              fill: 'backwards' ,
+              direction: 'alternate'
+            }
+          );
+    }else if(choice == 2){
+        document.querySelector(`#ball`).animate(
+            [
+                { top: '460px', left: '730px' },
+                { top: '230px', left: '500px' }
+                
+            ],
+            {
+              duration: 1000,
+              fill: 'backwards' ,
+              direction: 'alternate'
+            }
+          );
+    }
+    
 }
