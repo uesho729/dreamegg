@@ -1,4 +1,4 @@
-var s=0,m=0,h=0,d=0,dhms=0,exp=0,graw=4,wid=200,hei=200,widup=10,heiup=10;
+var s=0,m=0,h=0,d=0,dhms=0,exp=0,darkexp=0,graw=4,darkgraw=10,wid=200,hei=200,widup=10,heiup=10;
 
 image();
             
@@ -9,6 +9,9 @@ function image(){
     pict.src = "img/denmaru2.png"
     pict.width = wid;
     pict.height = hei;
+    if(darkexp >= darkgraw){
+        pict.src = "img/denwaru.png"
+    }
 }
 
 //タイマーの開始
@@ -58,5 +61,12 @@ function experience(){
     image();
 }
 
+function darkexperience(){
+    darkexp++;
+    //成長値がたまった処理
+   
+    document.getElementById("exp").innerHTML = exp;                   //経験値表示
+    document.getElementById("graw").innerHTML = Math.ceil(graw);      //成長値表示
+    image();
 
-
+}

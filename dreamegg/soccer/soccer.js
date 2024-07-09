@@ -4,8 +4,6 @@ var choice = 2;
 function start(){
     direction = moveKeeper();
     moveBall();
-    setTimeout("decision()",1000);
-    
 }
 
 
@@ -90,14 +88,28 @@ function moveBall(){
               direction: 'alternate'
             }
           );
+    }else if(choice == 3){
+        document.querySelector(`#ball`).animate(
+            [
+                { top: '460px', left: '730px' },
+                { top: '230px', left: '950px' }
+            ],
+            {
+              duration: 1000,
+              fill: 'backwards' ,
+              direction: 'alternate'
+            }
+          );
     }
+    setTimeout("decision()",1000);
     
 }
 
 function decision(){
     if(choice == direction){
         alert("残念...");
-        choice = 0;
+    }else{
+        alert("ゴーール！！\nおめでとう！");
     }
+    choice = 0;
 }
-

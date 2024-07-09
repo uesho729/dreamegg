@@ -10,6 +10,11 @@ body{
     bottom: 20%;
     left: 30%;
 }
+#btn2{
+    position: fixed; /* 今の位置を基準 */
+    bottom: 20%;
+    left: 35%;
+}
 
 .direction{
     
