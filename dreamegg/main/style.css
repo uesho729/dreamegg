@@ -1,0 +1,135 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+img.takecare {
+    width: 100px;
+    border: solid 3px #333;
+}
+
+#image {
+    margin-top: 400px;
+}
+
+#room {
+    background-size: cover;
+    background-image: url("img/room.png");
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-color);
+}
+
+header .title {
+    font-size: 20px;
+    color: #fff;
+    height: 50px;
+}
+
+header nav {
+    background-color: var(--nav-color);
+    height: 50px;
+}
+
+main {
+    font-size: 20px;
+}
+
+.drawer-menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.drawer-menu-toggle .hamburger {
+    margin-left: 650px;
+    position: absolute;
+    height: 2px;
+    width: 500px;
+    margin-bottom: 7.5px;
+}
+
+.drawer-menu-toggle .hamburger:last-child {
+    margin-bottom: 0;
+}
+
+.drawer-menu {
+    --drawer-menu-width: 300px;
+    --drawer-menu-header-height: 50px;
+}
+
+.drawer-menu input#check {
+    display: none;
+}
+
+.drawer-menu .drawer-menu-contents .drawer-menu-toggle::before {
+    font-size: 30px;
+    content: "×";
+}
+
+.drawer-menu .drawer-menu-contents {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    top: 0;
+    left: calc(-1 * var(--drawer-menu-width));
+    width: var(--drawer-menu-width);
+    height: 100dvh;
+    background-color: #ddd;
+    transition: left 0.5s;
+}
+
+.drawer-menu .drawer-menu-contents .drawer-menu-header {
+    width: var(--drawer-menu-width);
+    height: var(--drawer-menu-header-height);
+    height: var(--drawer-menu-header-height);
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.drawer-menu input#check:checked~.drawer-menu-contents {
+    left: 0;
+}
+
+.drawer-menu .drawer-menu-contents .drawer-menu-body {
+    display: flex;
+    flex-flow: column;
+}
+
+.drawer-menu .drawer-menu-contents .drawer-menu-body .drawer-menu-item {
+    font-size: 15px;
+    padding: 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.drawer-menu .drawer-menu-contents .drawer-menu-item:hover {
+    background-color: #999;
+}
+
+.drawer-menu input#check:checked~.backdrop {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+}
