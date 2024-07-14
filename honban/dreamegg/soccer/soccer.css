@@ -1,0 +1,64 @@
+body{
+    text-align: center;
+    width: auto;
+    height: auto;
+    background-color: rgb(17, 204, 29);
+}
+
+#start{
+    position: fixed; /* 今の位置を基準 */
+    bottom: 20%;
+    left: 30%;
+    width: 80px;
+    height: 60px;
+    background-color: rgb(236, 235, 240);
+}
+#btn2{
+    position: fixed; /* 今の位置を基準 */
+    bottom: 20%;
+    left: 35%;
+}
+
+.direction{
+    
+    position: fixed; /* 今の位置を基準 */
+    bottom: 0%;
+    left: 35%;
+}
+
+.arrow{
+    width: 100px;
+}
+
+#denmaru{
+    width: 100px;
+    height: 100px;
+    position: fixed; /* 今の位置を基準 */
+    top: 55%; /* 上から10px */
+    left: 50%; /* 左から20px */
+}
+
+#keeper{
+    width: 150px;
+    height: 150px;
+    position: fixed; /* 今の位置を基準 */
+    top: 16%; /* 上から10px */
+    left:45%; /* 左から20px */
+}
+
+#ball {
+    width: 50px;
+    height: 50px;
+    position: fixed; /* 今の位置を基準 */
+    top: 50%; /* 上から10px */
+    left: 47%; /* 左から20px */
+
+}
+
+#goal{
+    width:  600px;
+    height: 300px;
+    position: fixed; /* 今の位置を基準 */
+    top: 0%; /* 上から10px */
+    left: 33%; /* 左から20px */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="btn1" onclick="start()">start</button>
+        <button id="btn2" onclick="window.open('/soccer/soccer.html')">soccer</button>
+        <div id="room">
+            <img id="image">
+        </div>
+        <h1 id="time">0d 0h 0m 0s</h1>
+        <img src="img/rice.png" class="takecare" name="takecare" id="food">
+        <img src="img/ball.png" class="takecare" name="takecare" id="play">
+        <img src="img/tabako.png" class="takecare" name="takecare" id="tabako">
+        
+        <header>
+            <div class="title"></div>
+            <nav>
+                <label class="drawer-menu-toggle" for="check">
+                    <p class="hamburger">ミニゲーム</p>
+                </label>
+                <div class="drawer-menu">
+                    <input id="check" type="checkbox">
+                    <label class="backdrop" for="check"></label>
+                    <div class="drawer-menu-contents">
+                        <div class="drawer-menu-header">
+                            <label class="drawer-menu-toggle" for="check"></label>
+                        </div>
+                        <div class="drawer-menu-body">
+                            <p class="drawer-menu-item" onclick="window.open ('/soccer/soccer.html')" >サッカー</p>
+                            <p class="drawer-menu-item" id="save">セーブする</p>
+                            <p class="drawer-menu-item" id="load">ロードする</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div>
+            <p>経験値</p>
+            <p id="exp">0</p>
+        </div>
+        <div>
+            <p>成長値</p>
+            <p id="graw">0</p>
+        </div>
+
+        <script type="module" src="index.js"></script>
+    </body>
+    
+</html>

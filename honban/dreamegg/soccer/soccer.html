@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="soccer.css">
+    </head>
+    <body>
+        <button id="start" name="start">キック</button>
+        <button id="btn2" onclick="window.open('/main/index.html')">main</button>
+        <!--<img src="keeper.png" id="keeper">-->
+        <img src="img/Denmaru-back.png" alt="でんまるくん" id="denmaru">
+        <img src="img/goal.png"alt="ゴール"id="goal">
+        <img src="img/keeper.png"alt="キーパー"id="keeper">
+        <img src="img/ball.png"alt="ボール"id="ball">
+        <div class="direction">
+            <img src="img/def-left.png" class="arrow" id="arrowleft" onclick="aimBall(this.id)">
+            <img src="img/def-topleft.png" class="arrow" id="arrowtopleft" onclick="aimBall(this.id)">
+            <img src="img/def-center.png" class="arrow" id="arrowcenter" onclick="aimBall(this.id)">
+            <img src="img/def-topright.png" class="arrow" id="arrowtopright" onclick="aimBall(this.id)">
+            <img src="img/def-right.png" class="arrow" id="arrowright" onclick="aimBall(this.id)">
+        </div>
+        
+        <script src="soccer.js"></script>
+    </body>
+    
+</html>
